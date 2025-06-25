@@ -6,6 +6,8 @@ library("ggtree")
 library("readr")
 
 #http://blog.phytools.org/2014/11/pruning-trees-to-one-member-per-genus.html
+# Script used to prune the Lamiales tree from Fonseca et al. (2021) down to only Orobanchaceae species.  
+# The file `OrobanchaceaeSpList.txt` is in the `Data/congruification` folder.
 
 setwd("C:/Users/pedro/OneDrive/Desktop/Agalinis/Analyses/Congruification")
 
