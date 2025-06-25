@@ -1,0 +1,18 @@
+#NEXUS
+begin trees;
+	tree con_50_majrule = [&R] ((Brachystigma_wrightii:0.010867,(Dasistoma_macrophylla:0.008236,Aureolaria_pedicularia:0.004469):0.007278):0.005719,(((((((((((Agalinis_acuta:1.64E-4,Agalinis_decemloba:0.00111):2.72E-4,Agalinis_tenella:0.001246):0.009879,Agalinis_skinneriana:0.014246):0.002228,(Agalinis_flexicaulis:0.010016,Agalinis_obtusifolia:0.007623):0.005857):0.007271,Agalinis_oligophylla:0.028588):0.001684,Agalinis_aphylla:0.032519):0.001782,Agalinis_viridis:0.01069):0.002151,((Agalinis_edwardsiana:0.00847,(Agalinis_homalantha:0.007563,Agalinis_pulchella:0.0157):0.001804,Agalinis_navasotensis:0.005541):0.00123,(Agalinis_peduncularis:0.006184,Agalinis_strictifolia:0.006678,Agalinis_gypsophila:0.003916):0.003902):0.002076):0.002478,Agalinis_linifolia:0.012037):4.42E-4,(((((Agalinis_albida:0.012923,(((Agalinis_fasciculata:0.003157,(Agalinis_paupercula:0.002584,Agalinis_purpurea:0.001395):0.00517):0.007648,Agalinis_harperi:0.008982):0.005301,Agalinis_gattingeri:0.013704):8.17E-4):0.001269,((Agalinis_kingsii:0.004578,Agalinis_maritima:4.28E-4):0.023207,Agalinis_laxa:0.01051,(Agalinis_plukenetii:0.011817,Agalinis_setacea:0.012667):0.003598):5.61E-4):9.74E-4,Agalinis_tenuifolia:0.008169):0.001678,(Agalinis_divaricata:0.018989,Agalinis_filicaulis:0.02326):0.008577):5.48E-4,Agalinis_auriculata:0.00892):0.001243):0.001796,(((((((Agalinis_aff_itambensis:0.001804,Agalinis_aff_nana:0.002035):4.04E-4,Agalinis_brachyphylla:0.002295):3.41E-4,(Agalinis_ramosissima:0.002035,((Esterhazya_caesarea:9.32E-4,Esterhazya_splendida:0.001426):0.001441,Esterhazya_nanuzae:0.001487):7.21E-4):7.1E-4,Agalinis_angustifolia:0.001485):0.002095,Agalinis_bandeirensis:0.001765):2.22E-4,Agalinis_communis:0.006312):5.48E-4,((((Agalinis_bangii:0.00102,Agalinis_scarlatina:3.25E-4):8.24E-4,Agalinis_reflexidens:0.001372):3.83E-4,(Agalinis_brevifolia:8.33E-4,Agalinis_megalantha:8.04E-4):5.49E-4,Agalinis_fiebrigii:7.03E-4,Agalinis_genistifolia:0.001736,Agalinis_pennellii:0.001356):5.62E-4,(Agalinis_lanceolata:0.001507,Agalinis_stenantha:0.00186):0.002278):0.004124):0.002612,(Agalinis_calycina:0.005003,Agalinis_heterophylla:0.001865):8.12E-4):0.00533):0.005719);
+end;
+
+begin r8s;
+collapse;
+blformat lengths=persite nsites=10647 ultrametric=no;
+MRCA AgaAureo Agalinis_aff_itambensis Aureolaria_pedicularia;
+MRCA AureoBrachy Aureolaria_pedicularia Brachystigma_wrightii;
+MRCA AureoDasis Aureolaria_pedicularia Dasistoma_macrophylla;
+fixage taxon=AgaAureo age=24.072231;
+fixage taxon=AureoBrachy age=8.38586900000001;
+fixage taxon=AureoDasis age=3.22128700000001;
+divtime method=pl algorithm=TN;
+set smoothing=0;
+describe plot=tree_description;
+end;
