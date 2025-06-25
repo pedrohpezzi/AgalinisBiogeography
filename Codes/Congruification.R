@@ -5,15 +5,18 @@ library(ape)
 
 setwd("C:/Users/pedro/OneDrive - University of Arkansas/Agalinis/Analyses/02_Congruification")
 
+#set path
 Sys.getenv("PATH")
 Sys.setenv(PATH=paste("C:/Users/pedro/OneDrive/Desktop/Softwares/PATHd8/PATHd8", Sys.getenv("PATH"), sep=":"))
 Sys.getenv("PATH")
 
-#Run
+#run congrification
+#the reference tree is the dated Orobanchaceae tree pruned from Fonseca et al. (2021)
 reference <- read.tree("InputData_Orobanchaceae/Fonseca_OrobanPauloPruned.tre")
 plot(reference)
 is.rooted(reference)
 
+#the target tree is the tree from Latvis et al. (2024)
 target <- read.tree("InputData_Orobanchaceae/AgalinisRooted_MrBayes.tre")
 plot(target)
 is.ultrametric(ultra_target)
