@@ -1258,9 +1258,9 @@ spec="Alignment">
 
     
 
-    <run id="mcmc" spec="MCMC" chainLength="100000000" storeEvery="5000">
+    <run id="mcmc" spec="MCMC" chainLength="100000000" storeEvery="1000">
             
-        <state id="state" spec="State" storeEvery="5000">
+        <state id="state" spec="State" storeEvery="1000">
                     
             <tree id="Tree.t:ITS" spec="beast.base.evolution.tree.Tree" name="stateNode">
                             
