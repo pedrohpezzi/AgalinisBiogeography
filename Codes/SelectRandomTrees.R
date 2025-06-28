@@ -1,8 +1,8 @@
 library(ape)
-setwd("C:/Users/pedro/OneDrive - University of Arkansas/Agalinis/Analyses/100randomtrees")
+setwd("C:/Users/pedro/OneDrive - University of Arkansas/Agalinis/Analyses/04_100randomtrees")
 
 # Load files form BEAST
-mcmc_file <- "TreeCombined_Sigma1.0.trees"
+mcmc_file <- "BEAST_concatenated_runs_combined.trees"
 mcmc_trees <- read.nexus(mcmc_file)
 num_trees <- length(mcmc_trees)
 
