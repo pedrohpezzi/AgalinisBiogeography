@@ -30,8 +30,7 @@ post_probs
 # Compute the posterior odds ratio for (say) two models 
 post_probs["1"] / post_probs["2"] # How much more posterior probability is in 1 shifts than 2
 
-##Alternatively, we can summarize the posterior distribution of the number of shifts 
-## using summary methods:
+## Summarize the posterior distribution of the number of shifts using summary methods
 tree = read.tree("Results/concatenated_beast/concatenated_beast_nosynonyms_noout.tre")
 edata <- getEventData(tree, eventdata = "Results/concatenated_beast/concatenated_event_data.txt", burnin=0.2)
 shift_probs <- summary(edata)
@@ -49,7 +48,7 @@ dev.off()
 
 # Plot rate through time
 ratematrix <- getRateThroughTimeMatrix(edata) # Calculating ahead of time avoids repeating calculations to adjust figure; still need to recalculate for different nodes
-#plotRateThroughTime(ratematrix,intervalCol="red", avgCol="red")
+# plotRateThroughTime(ratematrix,intervalCol="red", avgCol="red")
 pdf("concatenated_rate_through_time.pdf", width=6, height=5)
 plotRateThroughTime(ratematrix,intervalCol="skyblue", avgCol="skyblue3",ratetype="netdiv", ylim = c(0, 1))
 dev.off()
