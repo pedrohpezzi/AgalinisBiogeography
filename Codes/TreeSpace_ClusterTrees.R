@@ -10,11 +10,11 @@ setwd("/storage/ppezzi/BEAST_Agalinis/clustertrees")
 
 trees <- read.nexus("BEAST_concatenated_runs_combined.trees")
 
-# choose random 75k trees - 25% of trees
-subsamples <- trees[sample(1:length(trees),75000)]
+# choose random 30k trees - 10% of trees
+subsamples <- trees[sample(1:length(trees),30000)]
 
 # save the subsamples file 
-write.nexus(subsamples, file ="75_subsamples.tre")
+write.nexus(subsamples, file ="30_subsamples.tre")
 
 # use treespace to find and project the distances:
 Dscape <- treespace(trees, nf=3)
@@ -29,6 +29,18 @@ BEASTGroves <- findGroves(Dscape, nclust=10)
 plotGrovesD3(BEASTGroves, legend_width=50, col_lab="Cluster")
 # plot axes 2 and 3. This helps to show why, for example, clusters X and Y have been identified as separate, despite them appearing to overlap when viewing axes 1 and 2.
 plotGrovesD3(BEASTGroves, xax=2, yax=3, legend_width=50, col_lab="Cluster")
+
+library(htmltools)
+plot1 <- plotGrovesD3(BEASTGroves, legend_width = 50, col_lab = "Cluster")
+plot2 <- plotGrovesD3(BEASTGroves, xax = 2, yax = 3, legend_width = 50, col_lab = "Cluster")
+browsable(
+  tagList(
+    tags$div(style = "display: flex; flex-direction: column; gap: 30px;",
+             tags$div(plot1),
+             tags$div(plot2)
+    )
+  )
+)
 
 # find median trees for the 10 clusters identified earlier:
 res <- medTree(trees, BEASTGroves$groups)
