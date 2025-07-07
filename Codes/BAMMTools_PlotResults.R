@@ -6,13 +6,13 @@ library("BAMMtools")
 library("openxlsx")
 library("coda")
 
-#set working directory
+# Set WD
 setwd("C:/Users/pedro/OneDrive - University of Arkansas/Agalinis/Analyses/08_BAMM")
 
-# check convergence
+# Check convergence
 mcmcout <- read.csv("Results/concatenated_beast/concatenated_mcmc_out.txt", header=T)
 plot(mcmcout$logLik ~ mcmcout$generation)
-# burnin 20% of samples
+# Burn-in 20% of samples
 burnstart <- floor(0.20 * nrow(mcmcout))
 postburn <- mcmcout[burnstart:nrow(mcmcout), ]
 plot(postburn$logLik ~ postburn$generation)
@@ -22,12 +22,12 @@ plot(postburn$logLik ~ postburn$generation)
 effectiveSize(postburn$N_shifts)
 effectiveSize(postburn$logLik)
 
-# the number of macroevolutionary rate regimes on our phylogenetic tree
+# The number of macroevolutionary rate regimes on our phylogenetic tree
 post_probs <- table(postburn$N_shifts) / nrow(postburn)
-#names(post_probs)
+# Names(post_probs)
 post_probs
 
-# to compute the posterior odds ratio for (say) two models 
+# Compute the posterior odds ratio for (say) two models 
 post_probs["1"] / post_probs["2"] # How much more posterior probability is in 1 shifts than 2
 
 ##Alternatively, we can summarize the posterior distribution of the number of shifts 
@@ -54,7 +54,7 @@ pdf("concatenated_rate_through_time.pdf", width=6, height=5)
 plotRateThroughTime(ratematrix,intervalCol="skyblue", avgCol="skyblue3",ratetype="netdiv", ylim = c(0, 1))
 dev.off()
 
-#vBayes Factor
+# Bayes Factor
 bfmat <- computeBayesFactors(postburn, expectedNumberOfShifts=1, burnin=0.2)
 bfmat
 
