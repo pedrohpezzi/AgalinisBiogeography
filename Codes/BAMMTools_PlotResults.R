@@ -3,6 +3,8 @@
 library("phytools")
 library("ape")
 library("BAMMtools")
+library("openxlsx")
+library("coda")
 
 #set working directory
 setwd("C:/Users/pedro/OneDrive - University of Arkansas/Agalinis/Analyses/08_BAMM")
@@ -17,7 +19,6 @@ plot(postburn$logLik ~ postburn$generation)
 
 # check the effective sample sizes of the log-likelihood 
 # and the number of shift events present in each sample, should be larger than 200
-library(coda)
 effectiveSize(postburn$N_shifts)
 effectiveSize(postburn$logLik)
 
@@ -78,7 +79,6 @@ save(edata,
      file="concatenated_BAMMFiles.Rsave")
 
 # Get tip diversification rates in a excel file format
-library(openxlsx)
 lambda_avg <- tiprates[["lambda.avg"]]
 mu_avg <- tiprates[["mu.avg"]]
 net_diversification <- lambda_avg - mu_avg
