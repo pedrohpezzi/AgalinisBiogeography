@@ -24,7 +24,6 @@ lifehistory <- lifehistory[tree$tip.label, ]
 # Recode lifehistory syndromes 
 # 1 code for annual
 # 2 code for perennial
-# 1&2 indicates ambiguity
 lifehistory$lifehistory <- gsub("annual", "1", lifehistory$lifehistory)
 lifehistory$lifehistory <- gsub("perennial", "2", lifehistory$lifehistory)
 lifehistory$lifehistory <- as.factor(lifehistory$lifehistory)
