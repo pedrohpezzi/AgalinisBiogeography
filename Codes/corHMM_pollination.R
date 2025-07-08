@@ -247,14 +247,6 @@ rownames(states_df) <- NULL
 # Display the final object
 states_df
 
-# plot results - Averaged model
-plotRECON(tree, likelihoods = states_df, cex = 0.5, 
-          piecolors = c("pink", "red4"), show.tip.label = T) # plot AER
-colors <- as.factor(b0$pollinator)
-colors <- factor(colors, labels = c("pink", "red4"))
-names(colors) <- b0$species; colors <- as.character(colors)
-tiplabels(pch=19, cex=0.5, col = colors)
-
 # Save SVG
 svglite(filename = "beast_concatenated_pollination.svg", width = 8, height = 8)
 plotRECON(tree, likelihoods = states_df, cex = 0.8,  pie.cex = 0.4,
