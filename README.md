@@ -2,7 +2,7 @@
 
 This repository contains the data and code for the Pezzi et al. (year) paper on the biogeographic history and diversification of *Agalinis* and *Esterhazya*.
 
-- `Data/` — Input data and results for most analyses.  
+- `Data/` — Input data for most analyses, results for some analyses.
 - `Codes/` — Scripts and code used in the analyses.
 
 If what you’re looking for is not available here, it was likely too large to upload to github and is available on [Zenodo](http://www.link.com).  
