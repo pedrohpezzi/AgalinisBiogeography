@@ -4,10 +4,10 @@ library(geiger)
 library(phytools)
 library(ape)
 
-setwd("C:/Users/pedro/OneDrive - University of Arkansas/Agalinis/Analyses/HiSSE")
+setwd("C:/Users/pedro/OneDrive - University of Arkansas/Agalinis/Analyses/11_HiSSE")
 
 # Load the trees
-trees <- read.tree(file='InputTrees/100_pruned_trees.newick')
+trees <- read.tree(file='InputTrees/100trees_nosyno_noout.nwk')
 tips_to_drop <- c("Agalinis_stenantha", "Agalinis_bangii", "Agalinis_reflexidens") 
 trees_dropped <- lapply(trees, drop.tip, tip = tips_to_drop)
 class(trees_dropped) <- "multiPhylo"
