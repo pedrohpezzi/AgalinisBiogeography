@@ -34,46 +34,41 @@ polhd
 name.check(tree, hd)
 name.check(tree, po)
 is.ultrametric(tree)
+f <- c(0.71,0.58)
 
-#constant rate model
+## Constant rate model
 turnover <- c(1,1)
 extinction.fraction <- c(1,1)
-f <- c(0.71,0.58)
 trans.rates.bisse <- TransMatMakerHiSSE(hidden.traits=0)
 print(trans.rates.bisse)
-
 dull.null <- hisse(phy=tree, data=polhd, f=f, turnover=turnover, eps=extinction.fraction, hidden.states=FALSE,trans.rate=trans.rates.bisse)
 dull.null
 
-# BiSSE model
+## BiSSE model
 turnover <- c(1,2)
 extinction.fraction <- c(1,1)
-f <- c(0.71,0.58)
 BiSSE <- hisse(phy=tree, data=polhd, f=f, turnover=turnover,eps=extinction.fraction, hidden.states=FALSE,trans.rate=trans.rates.bisse)
 BiSSE
 
 ## HiSSE model
 turnover <- c(1,2,3,4)
 extinction.fraction <- rep(1, 4)
-f <- c(0.71,0.58)
 trans.rate.hisse <- TransMatMakerHiSSE(hidden.traits=1)
 print(trans.rate.hisse)
 hissepoll <- hisse(phy=tree, data=polhd, f=f, turnover=turnover,eps=extinction.fraction, hidden.states=TRUE,trans.rate=trans.rate.hisse)
 hissepoll
 
-## CID-2
+## CID-2 model
 turnover <- c(1, 1, 2, 2)
 extinction.fraction <- rep(1, 4)
-f <- c(0.71,0.58)
 trans.rate.CID2 <- TransMatMakerHiSSE(hidden.traits=1, make.null=TRUE)
 print(trans.rate.CID2)
 hiCID2 <- hisse(phy=tree, data=polhd, f=f, turnover=turnover,eps=extinction.fraction, hidden.states=TRUE,trans.rate=trans.rate.CID2)
 hiCID2
 
-## CID-4
+## CID-4 model
 turnover <- c(1, 1, 2, 2, 3, 3, 4, 4)
 extinction.fraction <- rep(1, 8) 
-f <- c(0.71,0.58)
 trans.rate.hiCID4 <- TransMatMakerHiSSE(hidden.traits=3, make.null=TRUE)
 trans.rate.hiCID4 
 hiCID4 <- hisse(phy=tree, data=polhd, f=f, turnover=turnover,eps=extinction.fraction, hidden.states=TRUE,trans.rate=trans.rate.hiCID4)
