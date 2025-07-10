@@ -1,6 +1,6 @@
 ## Biogeography and Diversification of *Agalinis*
 
-This repository contains the data and code for the Pezzi et al. paper on the biogeographic history and diversification of *Agalinis* and *Esterhazya*.
+This repository contains the data and code for the paper on the biogeographic history and diversification of *Agalinis* and *Esterhazya*.
 
 - `Data/` — Input data for most analyses, results for some analyses.
 - `Codes/` — Scripts and code used in the analyses.
@@ -10,8 +10,8 @@ If you still can’t find what you need, feel free to contact me via email:
 📧 **pedrohenriquepezzi@gmail.com**  
 📧 **ppezzi@uark.edu**
 
-### Paper
-**Pezzi, P. H., Soltis, P., Soltis, D. E., & Latvis, M. (year).** Name of the paper here. *Journal*, volume(issue), pages. doi: https://doi.org/00.0000000
+### Paper citation
+.....
 
 ---
 
