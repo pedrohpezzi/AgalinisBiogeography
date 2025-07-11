@@ -10,7 +10,8 @@ If you still can’t find what you need, feel free to contact me via email:
 📧 **pedrohenriquepezzi@gmail.com**  
 📧 **ppezzi@uark.edu**
 
-### Paper citation
+### Paper
+*In prep.*
 .....
 
 ---
