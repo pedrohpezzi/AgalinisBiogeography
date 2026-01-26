@@ -11,7 +11,7 @@ If you still can’t find what you need, feel free to contact me via email:
 📧 **ppezzi@uark.edu**
 
 ### Paper
-Pezzi, P. H., Soltis, P. S., Soltis, D. E., & Latvis, M. *accepted*. ‘Dispersification’ of *Agalinis* (Orobanchaceae) into South America is associated with hummingbird pollination and perennial life history shifts. *Journal of Biogeography*. [*preprint*](https://www.biorxiv.org/content/10.1101/2025.11.21.689784v1)
+Pezzi, P. H., Soltis, P. S., Soltis, D. E., & Latvis, M. (2026). ‘Dispersification’ of *Agalinis* (Orobanchaceae) Into South America Is Associated With Hummingbird Pollination and Perennial Life‐History Shifts. Journal of Biogeography, 53(1), e70143. https://doi.org/10.1111/jbi.70143
 
 
 ---
